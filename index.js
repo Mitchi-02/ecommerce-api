@@ -15,7 +15,6 @@ app.use('/verify', verificationRoutes);
 app.use('/admin', auth, admin, verified, adminRoutes);
 
 const dbUrl = process.env.DB_CONNECTION;
-console.log(dbUrl);
 mongoose.connect(dbUrl)
     .then((result) => { 
         console.log('connected')
